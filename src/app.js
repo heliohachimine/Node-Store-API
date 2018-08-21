@@ -10,6 +10,9 @@ const router = express.Router();
 //Conecta ao banco
 mongoose.connect('mongodb://heliohachimine:helio123@ds018248.mlab.com:18248/node-str');
 
+//Carrega os models
+const Produto = require('./models/produto'); 
+
 //Carrega as rotas
 const indexRoute = require('./routes/index-route');
 const produtoRoute = require('./routes/produto-route');
