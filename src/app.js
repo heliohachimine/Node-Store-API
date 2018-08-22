@@ -3,12 +3,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const config = require('./config');
 
 const app = express();
-const router = express.Router();
 
 //Conecta ao banco
-mongoose.connect('mongodb://heliohachimine:helio123@ds018248.mlab.com:18248/node-str');
+mongoose.connect(config.connectionString);
 
 //Carrega os models
 const Produto = require('./models/produto'); 
