@@ -13,6 +13,7 @@ mongoose.connect('mongodb://heliohachimine:helio123@ds018248.mlab.com:18248/node
 //Carrega os models
 const Produto = require('./models/produto'); 
 const Cliente = require('./models/cliente');
+const Pedido = require('./models/pedido');
 
 //Carrega as rotas
 const indexRoute = require('./routes/index-route');
