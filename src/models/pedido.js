@@ -29,8 +29,9 @@ const schema = new Schema({
             default: 1
         },
         price:{
+            type: Number,
             require: true
-        },
+     },
         produto: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'Produto'

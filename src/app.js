@@ -18,6 +18,8 @@ const Pedido = require('./models/pedido');
 //Carrega as rotas
 const indexRoute = require('./routes/index-route');
 const produtoRoute = require('./routes/produto-route');
+const clienteRoute = require('./routes/cliente-route');
+const pedidoRoute = require('./routes/pedido-route');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -26,5 +28,7 @@ app.use(bodyParser.urlencoded({
 
 app.use('/', indexRoute);
 app.use('/produtos', produtoRoute);
+app.use('/clientes', clienteRoute);
+app.use('/pedidos', pedidoRoute);
 
 module.exports = app;

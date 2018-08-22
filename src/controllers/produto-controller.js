@@ -1,7 +1,5 @@
 'use strict';
 
-const mongoose = require('mongoose');
-const Produto = mongoose.model('Produto');
 const ValidationContract = require('../validators/fluent-validator');
 const repository = require('../repositories/produto-repository');
 
@@ -76,8 +74,6 @@ exports.post = async(req, res, next) => {
   
 };
 
-
-
 exports.put = async(req, res, next) => {
     try{
         await repository.update(req.params.id, req.body)
@@ -89,6 +85,7 @@ exports.put = async(req, res, next) => {
             message: 'Falha ao processar sua requisição'
         });
     }
+
 };
 
 exports.delete = async(req, res, next) => {
